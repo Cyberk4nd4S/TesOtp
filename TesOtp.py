@@ -94,7 +94,7 @@ def alodoc(self,num):
 
 		head={
 			
-                        "User-Agent: ".self::$agent,
+                        "'user-agent':'Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36",
 			"X-Requested-With: XMLHttpRequest",
 			"Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
 			"Origin: https://nabill.me",
