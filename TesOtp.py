@@ -85,7 +85,7 @@ class docter:
 				time.sleep(1)
 			print()
 
-}              else if ($type == "CodaShopTsel") {
+}              def CodaShop(self,num)
 			self::Post(
 				array(
 					"nomor" => $nomor,
