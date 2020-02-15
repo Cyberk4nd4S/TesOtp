@@ -85,7 +85,7 @@ class docter:
 				time.sleep(1)
 			print()
 
-        def CodaShopTsel(self,num):
+        def CodaShop(self,num):
 		self.ses.headers.update({'referer':'https://nabill.me/Tools/Prank-Tools/Codashop-Spam-Telkomsel/api.php'})
 		req1=self.ses.get('https://nabill.me/Tools/Prank-Tools/Codashop-Spam-Telkomsel/api.php')
 		bs1=BS(req1.text,'html.parser')
@@ -160,7 +160,7 @@ while True:
 				main.prosehat(num)
 		elif pik == 4:
                         for i in range(lop)
-                                main.CodaShopTsel(num)
+                                main.CodaShop(num)
                 else:
 			print("?: Anda Buta!?)
 
