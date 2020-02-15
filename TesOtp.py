@@ -85,27 +85,33 @@ class docter:
 				time.sleep(1)
 			print()
 
-}              def CodaShop(self,num)
-			self::Post(
-				array(
-					"nomor" => $nomor,
-					"jumlah" => "1",
-				),
-				array(
-					"User-Agent: ".self::$agent,
-					"X-Requested-With: XMLHttpRequest",
-					"Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
-					"Origin: https://nabill.me",
-					"Accept: */*",
-					"Host: nabill.me",
-					"Sec-Fetch-Site: same-origin",
-					"Sec-Fetch-Mode: cors",
-					"Referer: https://nabill.me/Codashop_Spam_Telkomsel",
-					"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7,nb;q=0.6",
-					"Connection: keep-alive"
-				),
-				$loop, "https://nabill.me/Tools/Prank-Tools/Codashop-Spam-Telkomsel/api.php"
+def alodoc(self,num):
+		self.ses.headers.update({'referer':'https://nabill.me/Tools/Prank-Tools/Codashop-Spam-Telkomsel/api.php'})
+		req1=self.ses.get('https://nabill.me/Tools/Prank-Tools/Codashop-Spam-Telkomsel/api.php')
+		bs1=BS(req1.text,'html.parser')
+		token=bs1.find('meta',{'name':'csrf-token'})['content']
+#		print(token)
 
+		head={
+			
+                        "User-Agent: ".self::$agent,
+			"X-Requested-With: XMLHttpRequest",
+			"Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+			"Origin: https://nabill.me",
+			"Accept: */*",
+			"Host: nabill.me",
+			"Sec-Fetch-Site: same-origin",
+			"Sec-Fetch-Mode: cors",
+			"Referer: https://nabill.me/Ayo_Src_Bom",
+			"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7,nb;q=0.6",
+			"Connection: keep-alive"
+		}
+		req2=self.ses.post('https://nabill.me/Tools/Prank-Tools/Codashop-Spam-Telkomsel/api.php',headers=head,json={"user":{"phone":num}})
+#		print(req2.json())
+		if req2.json()['status'] == 'success':
+			print("[•] Berhasil")
+		else:
+			print("[-] Gagal")
 while True:
 	try:
 		os.system('clear')
