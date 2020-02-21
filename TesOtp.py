@@ -85,33 +85,7 @@ class docter:
 				time.sleep(1)
 			print()
 
-        def CodaShop(self,num):
-		self.ses.headers.update({'referer':'https://nabill.me/Tools/Prank-Tools/Codashop-Spam-Telkomsel/api.php'})
-		req1=self.ses.get('https://nabill.me/Tools/Prank-Tools/Codashop-Spam-Telkomsel/api.php')
-		bs1=BS(req1.text,'html.parser')
-		token=bs1.find('meta',{'name':'csrf-token'})['content']
-#		print(token)
-
-		head={
-			
-                        "'user-agent':'Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36",
-			"X-Requested-With: XMLHttpRequest",
-			"Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
-			"Origin: https://nabill.me",
-			"Accept: */*",
-			"Host: nabill.me",
-			"Sec-Fetch-Site: same-origin",
-			"Sec-Fetch-Mode: cors",
-			"Referer: https://nabill.me/Ayo_Src_Bom",
-			"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7,nb;q=0.6",
-			"Connection: keep-alive"
-		}
-		req2=self.ses.post('https://nabill.me/Tools/Prank-Tools/Codashop-Spam-Telkomsel/api.php',headers=head,json={"user":{"phone":num}})
-#		print(req2.json())
-		if req2.json()['status'] == 'success':
-			print("[•] Berhasil")
-		else:
-			print("[-] Gagal")
+        
 while True:
 	try:
 		os.system('clear')
@@ -132,7 +106,6 @@ while True:
 1. Alodokter.com
 2. Klikdokter.com
 3. Prosehat.com
-4. CodaShop
 	""")
 		pil=int(input("> Pilih: "))
 		print("="*25)
@@ -150,9 +123,6 @@ while True:
 		elif pil == 3:
 			for i in range(lop):
 				main.prosehat(num)
-		elif pik == 4:
-                        for i in range(lop)
-                                main.CodaShop(num)
                 else:
 			print("?: Anda Buta!?)
 
